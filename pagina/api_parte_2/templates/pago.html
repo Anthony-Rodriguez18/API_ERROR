@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block enlazar %}
+<link rel="stylesheet" href="{{ url_for('static', filename='pago.css') }}">
+{% endblock%}
+
+{% block contenido %}
+<fieldset>
+      <legend>
+         <p class="text-xxxxl font-bold">
+            <a class="text-fill" href="#0">Los medios de pago que tenemos son: </a>
+         </p>
+      </legend>
+
+         <div class="1r">
+            <h2>Todo tipo: Mastercad, Visa, Interbank</h2>
+             <img src="{{ url_for('static', filename='IMAGE/t1.png') }}">
+             <img src="{{ url_for('static', filename='IMAGE/t2.png') }}">
+             <img src="{{ url_for('static', filename='IMAGE/t3.png') }}">
+         </div>
+
+         
+      </div>
+</fieldset>
+{% endblock%}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazon Login</title>
+	  <link rel="stylesheet" href="{{ url_for('static', filename='Login.css') }}">	
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="img">
+			<img src="{{ url_for('static', filename='IMAGE/cart.jpeg') }}">
+		</div>
+		<div class="login-content">
+			<form action="" method="post" >
+				<img src="{{ url_for('static', filename='IMAGE/cart.jpeg') }}">
+				<h2 class="title"> Sube tu producto </h2>
+				
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="text" name = "namepro" placeholder="Nombre del Producto" required><span class="barra"></span>
+           		   </div>
+           		</div>
+				
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="text" name = "precio" placeholder="Precio del Producto" required><span class="barra"></span>
+            	   </div>
+				</div>
+				
+				<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="text" name = "nombreimg" placeholder="IMAGEN(url)" required><span class="barra"></span>
+            	   </div>
+				</div>
+				
+				<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="text" name = "descripcion" placeholder="Descripción de Producto" required><span class="barra"></span>
+            	   </div>
+				</div>
+				   
+            	<button>INGRESAR</button> 
+            </form>
+        </div>
+    </div>
+</body>
+</html>

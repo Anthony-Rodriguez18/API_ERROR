@@ -1,0 +1,66 @@
+*{
+  margin:0;
+  font-family:'Space Mono';
+  
+}
+
+body {
+  background-image: url("FONDO1.jpg");
+  background-size: 100% ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.contenedor{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+
+
+.text-fill {
+  text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin orange;
+  align-content: center;
+}
+
+.text-fill:hover {
+  -webkit-text-fill-color: orange;
+}
+
+legend{
+  font-size: 40px;
+  text-align: center;
+  --font-primary: 'Space Mono', sans-serif;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.contenedor2{
+  padding-bottom: 20px;
+  text-align: center;
+}
+img {
+ max-width: 10%;
+ max-height: 10%;
+}
+
+
+.1r{
+  width: 5px;
+}
+.2r{
+  width: 5px;
+}
+.3r{
+  width: 5px;
+}

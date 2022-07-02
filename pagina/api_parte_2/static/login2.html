@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazon Login</title>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='Register.css') }}">
+	 <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="login-content">
+			<form id="form">
+
+				<img src="{{ url_for('static', filename='IMAGE/logo1.png') }}">
+				<h2 class="title">Logueate</h2>
+				
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="email" name = "email" placeholder="Email" required><span class="barra"></span>
+
+           		   </div>
+           		</div>
+				
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="password" name = "contrasena" placeholder="Contraseña" required><span class="barra"></span>
+						
+            	   </div>
+				   
+				   </div>
+				   
+			
+				   <button>Registrate</button> 
+			</form>
+        </div>
+		
+		<div class="img">
+			<img src="{{ url_for('static', filename='IMAGE/logo1.png') }}">
+		</div>
+		
+    </div>
+</body>
+
+
+</html>

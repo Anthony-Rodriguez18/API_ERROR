@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazon Login</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='Register.css') }}">
+	 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>	  
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="img">
+			<img src="{{ url_for('static', filename='IMAGE/logo1.png') }}">
+		</div>
+		<div class="login-content">
+			<form id="loginForm">
+				<img src="{{ url_for('static', filename='IMAGE/logo1.png') }}">
+				<h2 class="title">LOGUEATE </h2>
+				
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="email" name = "email" placeholder="Email" required><span class="barra"></span>
+           		   </div>
+           		</div>
+				
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+						<input type ="password" name = "contrasena" placeholder="Contraseña" required><span class="barra"></span>
+            	   </div>
+				   
+				   </div>
+				   
+            	<a href="#">¿Olvidaste tu Contraseña?</a>
+            	<button> INICIAR SESION </button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+      function showCotent(data) {
+        console.log(data)
+
+        if (data.success) {
+            localStorage.setItem("token", data.token);
+
+            window.location = window.location.href.replace("Login", "productos");
+        }
+      }
+
+      function login(e) {
+        e.preventDefault();
+
+        const username = document.querySelector("[name='email']").value;
+        const password = document.querySelector("[name='contrasena']").value;
+
+        const url = "http://localhost:5000/login";
+
+        const payload = { username, password };
+
+        axios.post(url, payload).then((data) => showCotent(data.data));
+      }
+
+      const form = document.getElementById("loginForm");
+      form.addEventListener("submit", login);
+    </script>
+</html>

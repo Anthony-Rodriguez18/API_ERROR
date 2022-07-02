@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block enlazar %}
+<link rel="stylesheet" href="{{ url_for('static', filename='perfil.css') }}">
+{% endblock%}
+
+{% block contenido %}
+<fieldset>
+      <legend>
+         <p class="text-xxxxl font-bold">
+            <a class="text-fill" href="#0">Síguenos en nuestras redes sociales: </a>
+         </p>
+      </legend>
+
+         <div class="1r">
+            <h2>Amazon_peru_</h2>
+             <img src="{{ url_for('static', filename='IMAGE/ig.png') }}">
+         </div>
+
+          <div class="2r">
+            <h2>Amazon Perú</h2>
+             <img src="{{ url_for('static', filename='IMAGE/fb.png') }}">
+         </div>
+
+          <div class="3r">
+            <h2>@Amazon__peru</h2>
+             <img src="{{ url_for('static', filename='IMAGE/tw.png') }}">
+         </div>
+
+      </div>
+</fieldset>
+{% endblock%}

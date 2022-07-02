@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+        <title> More</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}">
+        {% block enlazar %}{% endblock %}
+   </head>
+
+   <body>
+      <div class="contenedor">
+         {% block contenido %}{% endblock %}
+      </div>
+
+   </body>
+</html>
